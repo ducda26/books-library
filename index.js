@@ -19,8 +19,17 @@ app.get('/', (req, res) => {
 app.get('/users', function(req, res) {
     res.render('users/index',{
         users: [
-            {id: 1, name:'Duc'},
-            {id: 2, name:'Tieu Vy'}
+            {id: 1, name:'Duc', phone: '098678965'},
+            {id: 2, name:'Tieu Vy', phone: '07898677'}
+        ]
+    })
+});
+
+app.get('/books', function(req, res) {
+    res.render('books/index',{
+        books: [
+            {id: 1, title:'Muon Kiep Nhan Sinh', description: 'John Vu'},
+            {id: 2, title:'Tuong Lai The Gioi', description: 'Vo Dinh'}
         ]
     })
 });

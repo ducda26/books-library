@@ -1,5 +1,7 @@
-h1 Quản lý User
+extends ../layouts/common.pug
 
+
+h1 Quản lý User
 ul
     each user in users
-        li=user.name
+        li=`Họ và tên: ${user.name}   - SĐT: ${user.phone}`

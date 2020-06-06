@@ -1,0 +1,6 @@
+extends ../layouts/common.pug
+
+h1 Quản lý User
+ul
+    each book in books
+        li=`Tựa đề: ${book.title}   - Mô tả: ${book.description}`

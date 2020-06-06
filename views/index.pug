@@ -1,3 +1,9 @@
-h1 #{name}
-a(href="/users")
-    button User List
+extends ./layouts/common.pug
+
+block content
+    h1 #{name}
+    a(href="/users")
+        button(class="btn btn-primary m-2") Users List
+    br
+    a(href="/books")
+        button(class="btn btn-primary m-2") Books List
