@@ -12,7 +12,8 @@ app.use(bodyParser.urlencoded({ extended: true })) //body for parsing applicatio
 
 var users = [
     {id: 1, name:'Duc', phone: '098678965'},
-    {id: 2, name:'Tieu Vy', phone: '07898677'}
+    {id: 2, name:'Tieu Vy', phone: '07898677'},
+    {id: 3, name:'Bay Phon', phone: '654567675'}
 ]
 
 var books= [
