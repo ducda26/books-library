@@ -19,7 +19,7 @@ var users = [
 var books= [
     {id: 1, title:'Muon Kiep Nhan Sinh', description: 'John Vu'},
     {id: 2, title:'Tuong Lai The Gioi', description: 'Vo Dinh'},
-    {id: 3, title:'Cuộc phiêu lưu của anh Đức', description: 'Anh Đức'}
+    {id: 3, title:'Cuộc phiêu lưu của anh Đức', description: 'Anh Đức'},
     {id: 4, title:'Mật ngữ rừng xanh', description: 'Lê Hữu Nam'}
 ]
 
@@ -35,6 +35,16 @@ app.get('/users', function(req, res) {
     })
 });
 
+app.get('/users/create', function(req, res) {
+    res.render('users/create')
+});
+
+app.post('/users/create', function(req, res) {
+    users.push(req.body);
+    res.redirect('/users');
+});
+
+
 app.get('/users/search', function(req, res) {
     var q = req.query.q; // req.query là một object nên muốn lấy giá trị thì cần phải .p
     console.log(req.query);
@@ -46,10 +56,20 @@ app.get('/users/search', function(req, res) {
     })
 });
 
+
 app.get('/books', function(req, res) {
     res.render('books/index',{
         books: books
     })
+});
+
+app.get('/books/create', function(req, res) {
+    res.render('books/create')
+});
+
+app.post('/books/create', function(req, res) {
+    books.push(req.body);
+    res.redirect('/books');
 });
 
 app.get('/books/search', function(req, res) {

@@ -2,6 +2,8 @@ extends ../layouts/common.pug
 
 block content
     h1 Quản lý User
+    a(href="users/create")
+        button.btn.btn-success News
     form(action="/users/search", method="GET")
         input(type="text", name="q")
         button(class="btn btn-secondary m-2") Search

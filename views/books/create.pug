@@ -1,0 +1,13 @@
+extends ../layouts/common.pug
+
+block content
+    h1 Tạo sách mới
+
+    form(action="/books/create", method="POST")
+        label Tiêu đề
+        input.form-control(name="title", type="text") 
+        //- name là key của users
+        label.mt-2 Mô tả sách
+        input.form-control(name="description", type="text") 
+        //- phone là key của users
+        button(class="btn btn-success mt-1") Create

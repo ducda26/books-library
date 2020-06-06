@@ -1,0 +1,13 @@
+extends ../layouts/common.pug
+
+block content
+    h1 Create User
+
+    form(action="/users/create", method="POST")
+        label Name
+        input.form-control(name="name", type="text") 
+        //- name là key của users
+        label.mt-2 Phone
+        input.form-control(name="phone", type="text") 
+        //- phone là key của users
+        button(class="btn btn-success mt-1") Create
