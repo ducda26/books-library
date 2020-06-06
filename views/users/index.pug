@@ -1,12 +1,23 @@
 extends ../layouts/common.pug
 
 block content
-    h1 Quản lý User
-    a(href="users/create")
-        button.btn.btn-success News
-    form(action="/users/search", method="GET")
+    h1.d-flex.align-items-center 
+        span.mr-3 Quản lý User
+        a.btn.btn-primary(href="users/create") News User 
+    form.float-sm-right(action="/users/search", method="GET")
         input(type="text", name="q")
         button(class="btn btn-secondary m-2") Search
-    ul
-        each user in users
-            li=`Họ và tên: ${user.name}   - SĐT: ${user.phone}`
+    table.table
+            tr
+                th Name
+                th Phone
+                th Delete
+                th Update
+            each user in users
+                tr
+                    td= user.name
+                    td= user.phone
+                    td
+                        a.btn.btn-light(href="/users/" +user.id +"/delete") Delete
+                    td 
+                        a.btn.btn-light(href="/users/" +user.id + "/update") Update
