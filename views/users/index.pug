@@ -1,7 +1,10 @@
 extends ../layouts/common.pug
 
-
-h1 Quản lý User
-ul
-    each user in users
-        li=`Họ và tên: ${user.name}   - SĐT: ${user.phone}`
+block content
+    h1 Quản lý User
+    form(action="/users/search", method="GET")
+        input(type="text", name="q")
+        button(class="btn btn-secondary m-2") Search
+    ul
+        each user in users
+            li=`Họ và tên: ${user.name}   - SĐT: ${user.phone}`

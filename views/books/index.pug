@@ -1,6 +1,10 @@
 extends ../layouts/common.pug
 
-h1 Quản lý User
-ul
-    each book in books
-        li=`Tựa đề: ${book.title}   - Mô tả: ${book.description}`
+block content
+    h1 Quản lý Sách
+    form(action="/books/search", method="GET")
+        input(type="text", name="q")
+        button(class="btn btn-secondary m-2") Search
+    ul
+        each book in books
+            li=`Tựa đề: ${book.title}   - Mô tả: ${book.description}`
