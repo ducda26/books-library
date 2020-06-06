@@ -18,7 +18,9 @@ var users = [
 
 var books= [
     {id: 1, title:'Muon Kiep Nhan Sinh', description: 'John Vu'},
-    {id: 2, title:'Tuong Lai The Gioi', description: 'Vo Dinh'}
+    {id: 2, title:'Tuong Lai The Gioi', description: 'Vo Dinh'},
+    {id: 3, title:'Cuộc phiêu lưu của anh Đức', description: 'Anh Đức'}
+    {id: 4, title:'Mật ngữ rừng xanh', description: 'Lê Hữu Nam'}
 ]
 
 app.get('/', (req, res) => {
