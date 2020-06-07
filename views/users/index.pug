@@ -1,12 +1,9 @@
 extends ../layouts/common.pug
 
-block content
-    h1.d-flex.align-items-center 
-        span.mr-3 Quản lý User
-        a.btn.btn-primary(href="users/create") News User 
-    form.float-sm-right(action="/users/search", method="GET")
-        input(type="text", name="q")
-        button(class="btn btn-secondary m-2") Search
+block content   
+    h1.d-flex.align-items-center
+        span.mr-3 User List
+        a.btn.btn-primary(href="/users/add") New User
     table.table
             tr
                 th Name

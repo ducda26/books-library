@@ -1,9 +1,15 @@
 extends ./layouts/common.pug
 
-block content
-    h1 #{name}
-    a(href="/users")
-        button(class="btn btn-primary m-2") Users List
-    br
-    a(href="/books")
-        button(class="btn btn-primary m-2") Books List
+block content     
+    h1 Hello CodersX
+      br
+      a(href="/books") 
+        button(class="btn btn-primary mb-2 mt-2") Books
+      br
+      a(href="/users") 
+        button(class="btn btn-primary mb-2") Users
+      br
+      a(href="/transactions") 
+        button(class="btn btn-primary mb-2") Transactions
+          
+      

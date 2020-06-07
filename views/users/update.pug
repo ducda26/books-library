@@ -1,12 +1,10 @@
 extends ../layouts/common.pug
 
-block content 
-  h2 Update user
+block content    
+    h2 Update User
 
-  p Old user: 
-    span=book.title
-  form(action="/users/update", method="POST")
-    labe New user:
-      input(type="hidden" name="id", value=id)
-      input(type="text", name="name", class="form-control")
-      button(class="btn btn-primary mt-2") Update
+    form(action="/users/update" method="POST")
+        label New Name
+            input(type="text" name="name" class="form-control")
+            input(type="hidden" name="id", value=id)
+            button(class="btn btn-primary mt-2") Update

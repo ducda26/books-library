@@ -1,9 +1,12 @@
 const express = require('express');
 const app = express();
+
 const pug = require('pug');
 const bodyParser = require('body-parser') //body
+
 const userRouter =require('./routes/user.router')
 const bookRouter =require('./routes/book.router')
+const transactionRouter = require('./routes/transaction.router')
 // Set some defaults (required if your JSON file is empty)
 app.set('view engine', 'pug')
 app.set('views', './views')
@@ -34,6 +37,7 @@ app.get('/', (req, res) => {
 
 app.use('/users', userRouter)
 app.use('/books', bookRouter)
+app.use('/transactions', transactionRouter)
 
 app.listen(port, () => {
     console.log(`Example app listening http://localhost:${port}`);
